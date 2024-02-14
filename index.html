@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Projectile Motion</title>
+    <link rel="stylesheet" href="min.css"/>
+    <link rel="stylesheet" href="projectile.css"/>
+</head>
+<body>
+
+<div data-role="header">
+
+    <h1><b>Projectile Motion</b></h1>
+</div>
+
+<div data-role="content">
+    <!--<div data-role="collapsible" data-collapsed="false">
+        <h2>Plot Some Trajectories!</h2>-->
+
+        <div id="canvas">
+		<button id="toggleReadout" data-inline="true">Toggle Readouts</button>
+            <div id="readout">
+			
+                Readouts of the last projectile motion:
+                <p>Time taken: <b id="time"></b> s</p>
+                <p>Range: <b id="range"></b> m</p>
+                <p>Height: <b id="h"></b> m</p>
+                <p>Final velocity: <b id="v"></b> m/s</p>
+            </div>
+            <div id="chartDiv"></div>
+        </div>
+        <div id="setting">
+            <div data-role="controlgroup">
+                <button id="fireBtn" data-theme="b">Fire!</button>
+                <button id="clearBtn">Clear</button>
+            </div>
+
+            <label for="velocity" style="display:inline"><b>Initial Velocity</b> (m/s):</label>
+            <select name="vRange" id="vRange" data-inline="true" data-mini="true">
+                <option value="1">0 ~ 10 m/s</option>
+                <option value="2" selected="selected">0 ~ 100 m/s</option>
+                <option value="3">0 ~ 1000 m/s</option>
+            </select>
+            <input type="range" name="velocity" id="velocity" value="50" min="0" max="100" step="0.1"
+                   data-popup-enabled="true" data-inline="true"/>
+
+            <label for="angle"><b>Initial Angle</b> (&deg;):</label>
+            <input type="range" name="angle" id="angle" value="45" min="0" max="90" step="0.1"
+                   data-popup-enabled="true"/>
+
+            <label for="resistanceOn">Air Resistance</label>
+            <input type="checkbox" name="resistanceOn" id="resistanceOn" class="custom"/>
+
+            <div id="resistanceDiv" class="ui-disabled">
+                <label style="display:inline"><b>Air Resistance Drag Parameter <i id="dragValue">(b/m) =
+                    0</i></b>:</label>
+                <select name="rRange" id="rRange" data-inline="true" data-mini="true">
+                    <option value="1">0 ~ 0.02</option>
+                    <option value="2">0 ~ 0.0001</option>
+                </select>
+                <label for="resistance">(<i>b</i>/<i>m</i>) x <i id="s">1000</i>:</label>
+                <input type="range" name="resistance" id="resistance" value="0" min="0" max="20" step="0.1"
+                       data-popup-enabled="true"/>
+            </div>
+           
+</div>
+<script src="min1.js"></script>
+<script src="min2.js"></script>
+
+<script src="highcharts.js"></script>
+<script src="projectile.js"></script>
+</body>
+</html>
