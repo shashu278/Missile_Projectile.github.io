@@ -273,8 +273,11 @@ hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eeeeee;}
         display: inline-block;
         width: 75%;
         position: relative;
-        /*min-height: 500px;*/
-        /*padding-top: 1em;*/
+        min-height: 500px;
+        padding-top: 1em;
+    }
+     #highcharts-0{
+        margin-top:100px;
     }
 
     #readout {
