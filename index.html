@@ -49,10 +49,10 @@
             <input type="range" name="angle" id="angle" value="45" min="0" max="90" step="0.1"
                    data-popup-enabled="true"/>
 
-            <label for="resistanceOn">Air Resistance</label>
-            <input type="checkbox" name="resistanceOn" id="resistanceOn" class="custom"/>
+            <label for="resistanceOn" style="visibility:hidden">Air Resistance</label>
+            <input type="checkbox" name="resistanceOn" id="resistanceOn" class="custom" style="visibility:hidden"/>
 
-            <div id="resistanceDiv" class="ui-disabled">
+            <div id="resistanceDiv" class="ui-disabled" style="visibility:hidden">
                 <label style="display:inline"><b>Air Resistance Drag Parameter <i id="dragValue">(b/m) =
                     0</i></b>:</label>
                 <select name="rRange" id="rRange" data-inline="true" data-mini="true">
